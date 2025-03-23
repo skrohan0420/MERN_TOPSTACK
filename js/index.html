@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #con {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="con">
+        <h1>Calculator</h1>
+        <input type="number" id="n1">
+        <input type="number" id="n2">
+
+        <div>
+            +<input type="radio" name="type" value="sum">
+            -<input type="radio" name="type" value="sub">
+            /<input type="radio" name="type" value="div">
+            *<input type="radio" name="type" value="mul">
+        </div>
+
+        <button id="btn" onclick="calc()">CALCULATE</button>
+
+        <p id="result"></p>
+    </div>
+    <script>
+
+        function calc() {
+            // Get the values of the inputs
+            let n1 = parseFloat(document.querySelector("#n1").value);
+            let n2 = parseFloat(document.querySelector("#n2").value);
+
+            // Get the selected operation
+            let oper = document.querySelector('input[name="type"]:checked')?.value;
+
+            if (!oper) {
+                document.querySelector("#result").innerHTML = "Please select an operation.";
+                return;
+            }
+
+            // Perform the calculation based on the selected operation
+            let result;
+            if (oper === "sum") {
+                result = n1 + n2;
+            } else if (oper === "sub") {
+                result = n1 - n2;
+            } else if (oper === "div") {
+                if (n2 === 0) {
+                    result = "Cannot divide by zero";
+                } else {
+                    result = n1 / n2;
+                }
+            } else if (oper === "mul") {
+                result = n1 * n2;
+            }
+
+            // Display the result
+            document.querySelector("#result").innerHTML = "Result: " + result;
+        }
+
+        
+
+
+
+
+    </script>
+
+</body>
+
+</html>

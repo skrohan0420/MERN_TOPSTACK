@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+
+
+    <script>
+        //  Arrow function
+        let a = (x) => {
+            console.log(x);
+        }
+        a('hello world !!!!!')
+
+
+        // Object Destructuring Assignment
+        let obj = {
+            name: 'john',
+            age: 25,
+        }
+        let { name, age } = obj
+        console.log(name)
+        console.log(age)
+
+        // Array Destructuring Assignment
+        const fruits = ["Orange", "Banana", "Apple", "Mango"];
+        let [x, y] = fruits;
+        console.log(x)
+        console.log(y)
+
+        // Spread Operator
+        const q1 = ["Jan", "Feb", "Mar"];
+        const q2 = ["Apr", "May", "Jun"];
+        const q3 = ["Jul", "Aug", "Sep"];
+        const q4 = ["Oct", "Nov", "Des"];
+        const year = [...q1, ...q2, ...q3, ...q4];
+        console.log(year)
+
+        const numbers = [23, 55, 21, 87, 56];
+        let maxValue = Math.max(...numbers);
+        console.log(maxValue)
+
+        
+
+
+    </script>
+
+</body>
+
+</html>

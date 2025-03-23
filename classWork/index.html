@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(200deg, #5A3F37, #2C7744);
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h2> <i>To Do list</i></h2>
+        <input type="text" id="taskInput" placeholder="Add a task...">
+        <button id="addTaskBtn">Add Task</button>
+        <ul id="taskList"></ul>
+    </div>
+    
+    <script>
+        let tasks = []; // Array to store tasks
+        let taskInput = document.getElementById("taskInput");
+        let addTaskBtn = document.getElementById("addTaskBtn");
+        let taskList = document.getElementById("taskList");
+    
+        addTaskBtn.onclick = function () {
+            let taskText = taskInput.value.trim(); // Get the text from the input and remove extra spaces
+            if (taskText === "") return;//if input empty , do nothing 
+    
+            tasks.push(taskText); // Add task to array
+            taskList.innerHTML = ""; // Clear list before reloading
+    
+            for (let i = 0; i < tasks.length; i++) {
+                taskList.innerHTML += `<li>${tasks[i]} <button onclick="removeTask(${i})">X</button></li>`;
+            }
+    
+            taskInput.value = ""; // Clear input field
+        };
+    
+        function removeTask(index) {
+            tasks.splice(index, 1); // Remove the task from the array using splice()
+            taskList.innerHTML = ""; // Clear list before reloading
+    
+            for (let i = 0; i < tasks.length; i++) {
+                taskList.innerHTML += `<li>${tasks[i]} <button onclick="removeTask(${i})">X</button></li>`;
+            }
+        }
+    </script>
+    
+</body>
+</html>
