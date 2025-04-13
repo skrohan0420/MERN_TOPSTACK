@@ -1,35 +1,44 @@
-import React, { useState, useEffect } from 'react';
-import './App.css';
-import { ToastContainer, toast } from 'react-toastify';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./pages/Layout";
+import Home from "./pages/Home";
+import Blogs from "./pages/Blogs";
+import Contact from "./pages/Contact";
+import NoPage from "./pages/NoPage";
+import TestFetch from "./pages/TestFetch";
+import TodoList from "./pages/TodoList";
+import "./App.css";
+
+const App = () => {
 
 
-function App() {
 	// react components - react props
 	// react JSX 
 	// react froms - inputs
 	// react hooks - useState, useEffect
 	// react Array map
-	// NPM librery
-
-
-	const notify = () => toast.info('Wow so easy!', {
-		position: "top-center",
-		autoClose: 5000,
-		hideProgressBar: false,
-		closeOnClick: false,
-		pauseOnHover: true,
-		draggable: true,
-		progress: undefined,
-		theme: "light",
-	});
-
+	// npm librerys - react-router-dom
+	// react - fetch
 
 	return (
 		<>
-			<button onClick={notify}>Notify!</button>
-			<ToastContainer />
+			<BrowserRouter>
+				<Routes>
+
+					<Route path="/" element={<Layout />}>
+
+						<Route index element={<Home />} />
+						<Route path="blogs" element={<Blogs />} />
+						<Route path="contact" element={<Contact />} />
+						<Route path="fetch" element={<TestFetch />} />
+						<Route path="todo-list" element={<TodoList />} />
+						<Route path="*" element={<NoPage />} />
+
+					</Route>
+
+				</Routes>
+			</BrowserRouter>
 		</>
 	)
-}
+};
 
 export default App;
