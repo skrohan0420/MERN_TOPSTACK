@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+
+    <script>
+        let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        let arr2 = [10, 20, 30, 40, 50];
+        let arr3 = ["apple", "banana", "cherry"];
+        let arr4 = ["apple", "banana", "cherry", "apple"];
+        let arrObject = [
+            { name: "John", age: 30 },
+            { name: "Jane", age: 25 },
+            { name: "Jack", age: 35 }
+        ];
+
+        // length
+        console.log(arr.length, "outputs the length of the array");
+        // push
+        console.log(arr.push(10), "adds an element to the end of the array and returns the new length");
+        // pop
+        console.log(arr.pop(), "removes the last element from the array and returns it");
+        // unshift
+        console.log(arr2.unshift(0), "adds an element to the beginning of the array and returns the new length");
+        // shift
+        console.log(arr2.shift(), "removes the first element from the array and returns it");
+        // join
+        console.log(arr.join("|"), "joins all elements of the array into a string with a specified separator");
+        // slice
+        console.log(arr.slice(2, 5), "returns a shallow copy of a portion of the array into a new array object");
+        // splice
+        console.log(arr3.splice(0, 1, 100, 200), "changes the contents of an array by removing or replacing existing elements and/or adding new elements in place");
+        // indexOf
+        console.log(arr4.indexOf("banana"), "returns the first index at which a given element can be found in the array, or -1 if it is not present");
+        // lastIndexOf
+        console.log(arr4.lastIndexOf("apple"), "returns the last index at which a given element can be found in the array, or -1 if it is not present");
+        // includes
+        console.log(arr.includes(1), "determines whether an array includes a certain value among its entries, returning true or false as appropriate");
+        // find
+        console.log(arr.find((element) => {
+            if (element > 5) {
+                return element;
+            }
+        }), "returns the value of the first element in the array that satisfies the provided testing function");
+        // findIndex
+        console.log(arr.findIndex((element) => {
+            if (element > 5) {
+                return element;
+            }
+        }), "returns the index of the first element in the array that satisfies the provided testing function");
+        // concat
+        console.log(arr.concat(arr2), "merges two or more arrays and returns a new array");
+        // reverse
+        console.log(arr.reverse(), "reverses the elements of an array in place");
+        // evry
+        console.log(arr.every((element) => {
+            if (element > 0) {
+                return element;
+            }
+        }), "tests whether all elements in the array pass the test implemented by the provided function");
+        // some
+        console.log(arr.some((element) => {
+            if (element > 5) {
+                return element;
+            }
+        }), "tests whether at least one element in the array passes the test implemented by the provided function");
+        // reduce
+        console.log(arr.reduce((accumulator, currentValue) => {
+            return accumulator * currentValue;
+        }), "executes a reducer function on each element of the array, resulting in a single output value");
+        // forEach
+        arrObject.forEach((element,index) => {
+            console.log(element,index, "executes a provided function once for each array element");
+            console.log(element.name = element.name.toLocaleUpperCase());
+        });
+        // map     
+        arrObject.map((element,index) => {
+           element.name.toLocaleUpperCase()
+        });
+        // filter
+        let wholeNumbers = arr.filter((element,index) => {
+            if (element % 2 == 0 ) {
+                return element;
+            }
+        })
+
+        console.log(wholeNumbers, "creates a new array with all elements that pass the test implemented by the provided function");
+
+        // sort
+        console.log(arr.sort((a, b) => {
+            return a - b;
+        }), "sorts the elements of an array in place and returns the sorted array");
+        // fill
+        console.log(arr.fill(0, 2, 5), "fills all the elements of an array from a start index to an end index with a static value");
+    </script>
+  </body>
+</html>

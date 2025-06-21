@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+    // String Methods in JavaScript
+    
+    let str = "123123123";
+    let str2 = "hello world";
+    let str3 = "HELLO WORLD";  
+    let str4 = "    Hello    ";
+
+    // lenghth
+    console.log(str.length , "outputs strings length");
+    // charAt
+    console.log(str.charAt(0), "outputs first character of string");
+    // includes
+    console.log(str.includes("18"), "checks if string includes '123'");
+    // indexOf
+    console.log(str.indexOf("123"), "outputs index of '123' in string");
+    // lastIndexOf
+    console.log(str.lastIndexOf("1"), "outputs last index of '123' in string");
+    // slice
+    console.log(str.slice(4, 7), "outputs first three characters of string");
+    // replace
+    console.log(str.replace("123", "456"), "replaces '123' with '456'");
+    // toUpperCase
+    console.log(str2.toUpperCase(), "converts string to uppercase");
+    // toLowerCase
+    console.log(str3.toLowerCase(), "converts string to lowercase");
+    // split
+    console.log(str.split("5"), "splits string into an array by space");
+    // trim
+    console.log(str4.trim(), "removes whitespace from both ends of string");
+	// repeat
+	console.log(str.repeat(3), "repeats string three times");
+	// substring
+	console.log(str2.substring(0, 5), "returns a substring from index 0 to 5 but returns no minus value");
+	// substr
+	console.log(str2.substr(0, 5), "returns a substring from index 0 to 5 but returns minus value");
+	// concat
+	console.log(str.concat(" ", str2), "concatenates two strings with a space in between");
+	// startsWith
+	console.log(str2.startsWith("hello"), "checks if string starts with 'hello'");
+	// endsWith
+	console.log(str2.endsWith("world"), "checks if string ends with 'world'");
+	// search
+	console.log(str.search("2"), "searches for '1' in string and returns index");
+    // match
+    console.log(str.match(/1/g), "returns an array of matches for '123'");
+
+    
+    </script>
+
+</body>
+</html>

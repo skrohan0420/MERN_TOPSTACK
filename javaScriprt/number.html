@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let num1 = 10;
+        let num2 = "20";
+        let num3 = 30.51435463653664;
+        let num4 = "hello"; 
+        let num5 = "30.41435463653664";   
+    
+
+        // Number.isInteger
+        console.log(Number.isInteger(num1), "checks if num1 is an integer");
+        // Number.isNaN
+        console.log(Number.isNaN(0), "checks if num1 is NaN (not a number)");
+        // Number.isFinite
+        console.log(Number.isFinite(num1), "checks if num3 is a finite number");
+        // Number.toFixed
+        console.log(num3.toFixed(2), "formats num3 to 2 decimal places");
+        // parseInt
+        console.log(parseInt(num2), "parses num2 as an integer");
+        // parseFloat
+        console.log(parseFloat(num5), "parses num5 as a floating-point number");
+        // Number
+        console.log(Number(num2), "converts num2 to a number");
+
+
+        // math round
+        console.log(Math.round(num3), "rounds num3 to the nearest integer");
+        // math floor
+        console.log(Math.floor(num3), "rounds num3 down to the nearest integer");
+        // math ceil
+        console.log(Math.ceil(num3), "rounds num3 up to the nearest integer");
+        // math random
+        console.log(Math.random(), "generates a random number between 0 and 1");
+        // math max
+        console.log(Math.max(num1, num2, num3), "returns the maximum value among num1, num2, and num3");
+        // math min
+        console.log(Math.min(num1, num2, num3), "returns the minimum value among num1, num2, and num3");
+        // math pow
+        console.log(Math.pow(num1, 4), "raises num1 to the power of 2");
+        // math sqrt
+        console.log(Math.sqrt(10), "calculates the square root of num3");
+        // math abs
+        console.log(Math.abs(-10), "returns the absolute value of -10");
+    </script>
+
+</body>
+</html>

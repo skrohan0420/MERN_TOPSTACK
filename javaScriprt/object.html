@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let obj = {
+            name: "John",
+            age: 30,
+            city: "New York",
+            gender: "male"
+        };
+        let obj2 = {
+            name: "Jane",
+            age: 25,
+            city: "Los Angeles"
+        };
+        let obj3 = {
+            name: "Jack",
+            age: 35,
+            city: "Chicago"
+        };
+
+        // Object.keys
+        console.log(Object.keys(obj), "outputs the keys of the object");
+        // Object.values
+        console.log(Object.values(obj), "outputs the values of the object");
+        // Object.entries
+        console.log(Object.entries(obj), "outputs the entries of the object as an array of key-value pairs");
+        // Object.assign
+        console.log(Object.assign({}, obj, obj2), "copies the values of all enumerable own properties from one or more source objects to a target object and returns the target object");
+        // hasOwnProperty
+        console.log(obj2.hasOwnProperty("gender"), "returns a boolean indicating whether the object has the specified property as its own property (as opposed to inheriting it)");
+        // delete obj key  
+        // delete obj.city
+        // console.log(obj, "outputs the object after deleting the property");
+
+        // Object.freeze
+        console.log(Object.freeze(obj), "freezes the object, preventing new properties from being added to it, existing properties from being removed, and existing properties from being changed");
+        // Object.seal
+        console.log(Object.seal(obj2), "seals the object, preventing new properties from being added to it, but allowing existing properties to be changed");
+    </script>
+</body>
+</html>
