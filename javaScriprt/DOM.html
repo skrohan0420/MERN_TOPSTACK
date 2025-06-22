@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <div class="container">
+    <h1 id="box">JavaScript Dialogs</h1>
+    <input type="text" id="inp" />
+  </div>
+
+  <body>
+    <script>
+      // alert("Hello, World!"); // Displays an alert box with a message
+      // confirm("Are you sure?"); // Displays a confirmation dialog with OK and Cancel buttons
+      // let a = prompt("Please enter your name:"); // Displays a prompt dialog to get user input
+      // console.log(a); // Logs the user input to the console
+      // if (confirm("Are you sure?")) {
+      //     console.log("User clicked OK");
+      // } else {
+      //     console.log("User clicked Cancel");
+      // }
+      document.getElementById("box");
+      document.getElementsByClassName("container");
+
+      let con = document.querySelector(".container");
+      let box = document.querySelector("#box");
+      let inp = document.querySelector("#inp");
+      console.log(con); // Logs the container element to the console
+      console.log(box); // Logs the box element to the console
+
+      window.addEventListener("resize", function () {
+        let width = window.innerWidth; // Gets the current width of the window
+        let height = window.innerHeight; // Gets the current height of the window
+        console.log(`Window resized to ${width}x${height}`); // Logs the new dimensions to the console
+      });
+
+      //  1. Mouse Events
+      // Triggered by mouse actions.
+
+      // Event	Description	Example
+      // click	Fires when the element is clicked	element.addEventListener('click', fn)
+      // dblclick	Fires on double click	element.addEventListener('dblclick', fn)
+      // mousedown	Fires when mouse button is pressed	element.addEventListener('mousedown', fn)
+      // mouseup	Fires when mouse button is released	element.addEventListener('mouseup', fn)
+      // mousemove	Fires when the mouse moves	element.addEventListener('mousemove', fn)
+      // mouseover	Fires when mouse enters element	element.addEventListener('mouseover', fn)
+      // mouseout	Fires when mouse leaves element	element.addEventListener('mouseout', fn)
+      // mouseenter	Similar to mouseover (no bubbling)	element.addEventListener('mouseenter', fn)
+      // mouseleave	Similar to mouseout (no bubbling)	element.addEventListener('mouseleave', fn)
+      // contextmenu	Fires on right-click	element.addEventListener('contextmenu', fn)
+
+      // 🔹 2. Keyboard Events
+      // Triggered by keyboard actions.
+
+      // Event	Description	Example
+      // keydown	Fires when a key is pressed	window.addEventListener('keydown', fn)
+      // keyup	Fires when a key is released	window.addEventListener('keyup', fn)
+      // keypress	(deprecated) Fires when a key is pressed (not reliable for all keys)
+
+      // 🔹 3. Form Events
+      // Used with input fields, forms, selects, etc.
+
+      // Event	Description	Example
+      // submit	Fires when a form is submitted	form.addEventListener('submit', fn)
+      // change	Fires when an input value changes	input.addEventListener('change', fn)
+      // input	Fires on any input change	input.addEventListener('input', fn)
+      // focus	Fires when input gets focus	input.addEventListener('focus', fn)
+      // blur	Fires when input loses focus	input.addEventListener('blur', fn)
+      // reset	Fires when a form is reset	form.addEventListener('reset', fn)
+      // invalid	Fires when an input is invalid	input.addEventListener('invalid', fn)
+
+      // 🔹 4. Window Events
+      // Event	Description	Example
+      // load	Fires when page is fully loaded	window.addEventListener('load', fn)
+      // unload	Fires when page is about to unload	window.addEventListener('unload', fn)
+      // resize	Fires when window is resized	window.addEventListener('resize', fn)
+      // scroll	Fires when user scrolls	window.addEventListener('scroll', fn)
+      // beforeunload	Ask for confirmation before leaving page	window.addEventListener('beforeunload', fn)
+
+      // 🔹 5. Clipboard Events
+      // Event	Description	Example
+      // copy	Fires when content is copied	element.addEventListener('copy', fn)
+      // cut	Fires when content is cut	element.addEventListener('cut', fn)
+      // paste	Fires when content is pasted	element.addEventListener('paste', fn)
+
+      // 🔹 6. Drag and Drop Events
+      // Event	Description
+      // dragstart	Fires when drag starts
+      // drag	Fires while dragging
+      // dragenter	When draggable enters drop target
+      // dragover	While over drop target
+      // dragleave	Leaves drop target
+      // drop	Drops the item
+      // dragend	Drag ends (successful or not)
+
+      // 🔹 7. Touch Events (for mobile)
+      // Event	Description
+      // touchstart	Finger touches screen
+      // touchmove	Finger moves on screen
+      // touchend	Finger leaves screen
+      // touchcancel	Touch canceled (e.g., alert pops up)
+
+      // 🔹 8. Media Events
+      // Event	Description
+      // play	Media starts playing
+      // pause	Media paused
+      // ended	Media ends
+      // volumechange	Volume is changed
+      // timeupdate	Current time changes
+      // seeked	Seek operation completed
+
+      // 🔹 9. Animation & Transition Events
+      // Event	Description
+      // animationstart	    CSS animation starts
+      // animationend	    CSS animation ends
+      // animationiteration	Animation repeats
+      // transitionstart	CSS transition starts
+      // transitionend	    CSS transition ends
+
+      // 🔹 10. Pointer & Wheel Events
+      // Event	Description
+      // pointerdown	Pointer (mouse, touch, pen) pressed
+      // pointerup	    Pointer released
+      // pointermove	Pointer moved
+      // pointerenter / pointerleave	Pointer enters/leaves
+      // wheel	        Fires on mouse wheel scroll
+
+      // 🔹 11. Other DOM Events
+      // Event	Description
+      // DOMContentLoaded	DOM is loaded (before images etc.)
+      // error	Fires when an error occurs
+      // abort	Fired if resource loading is aborted
+      // visibilitychange	Page visibility changes
+      // fullscreenchange	Fullscreen mode toggled
+
+      setTimeout(() => {
+        // console.log("This is an alert after 2 seconds");
+      }, 2000); // Shows an alert after 2 seconds
+
+      let count = 0;
+
+      const intervalId = setInterval(() => {
+        count++;
+        console.log(`This is an alert every second: ${count}`);
+        if (count === 5) {
+          clearInterval(intervalId); // Correctly stops the interval
+          console.log("Interval stopped after 5 seconds");
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>

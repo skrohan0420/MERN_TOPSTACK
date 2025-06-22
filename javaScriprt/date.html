@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let date = new Date("2025-06-10");
+      let dateNow = Date.now(); // Returns the number of milliseconds since January 1, 1970
+      let dateYear = date.getFullYear(); // Returns the year (4 digits)
+      let dateMonth = date.getMonth(); // Returns the month (0-11, where 0 is January)
+      let dateDay = date.getDate(); // Returns the day of the month (1-31)
+      let dateHours = date.getHours(); // Returns the hour (0-23)
+      let dateMinutes = date.getMinutes(); // Returns the minutes (0-59)
+      let dateSeconds = date.getSeconds(); // Returns the seconds (0-59)
+      let dateTime = date.getTime(); // Returns the number of milliseconds since January 1, 1970
+      let localDateString = date.toLocaleDateString(); // Returns the date in local format
+      let isoString = date.toISOString(); // Returns the date in ISO format
+
+      console.log(date); // Current date and time
+      console.log(dateNow); // Current date and time
+      console.log(dateYear, dateMonth, dateDay); // Current year
+      console.log(dateHours, dateMinutes, dateSeconds); // Current year
+      console.log(dateTime); // Current date and time in milliseconds
+      console.log(localDateString); // Current date in local format
+      console.log(isoString); // Current date in ISO format
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let arr = [1, 2, 3, 4, 5];
+        let num = 3;
+        let str = "Hello, World!";
+        let obj = { name: "John", age: 30 };
+        let bool = true;
+        let a = new Set([1, 2, 3, 4, 5]);
+
+        console.log(typeof(str));
+        console.log(typeof(num));
+        console.log(typeof(arr));
+        console.log(typeof(obj));
+        console.log(typeof(bool));
+
+        console.log(Array.isArray(arr)); // true
+
+        console.log(a); // true
+
+        let arr1 = [1, 2, 3, 4, 5];
+        let arr2 = [6, 7, 8, 9, 10]
+        let arry3 = [...arr1, ...arr2, 1, 3]; // Spread operator to merge arrays
+        console.log(arry3); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 3]
+
+        function sum (...args) {
+            console.log(args); // Logs the arguments as an array`
+        }
+        sum(1,2,3,4,5)
+
+        let [x, y, ...rest] = [1, 2, 3, 4, 5];
+        console.log(x, y, rest);
+    </script>
+
+</body>
+</html>
